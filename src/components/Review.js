@@ -98,13 +98,22 @@ const Review = ({ id }) => {
           </div>
         ) : (
           <div className="mt-4">
+            <div className='font-extrabold text-4xl '> Peoples Thoughts</div>
             {data.map((element, i) => {
               return (
-                <div className="text-lime-200" key={i}>
-                  {element.thought}
+                <div className="text-lime-200 border-2 border-sky-500 mt-2 rounded-lg bg-neutral-400	" key={i}> 
+                 <p className='text-black	'> {new Date(element.timestamp).toLocaleString()}</p>
+                 <p className='text-black font-bold	'>{element.thought}</p>  
+                 <ReactStars
+                  size={20}
+                  half={true}
+                  value={element.Rating}
+                  edit={false}
+                />
                 </div>
               );
             })}
+          
           </div>
         )}
       </div>

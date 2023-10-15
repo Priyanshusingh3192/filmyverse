@@ -33,7 +33,7 @@ const Cards = () => {
         data.map((element, i) => {
           return (
             <Link to={`/detail/${element.id}`}>
-              
+            
             <div
               key={i}
               className='border-4 border-white rounded-lg mb-20 mt-10 card shadow-lg p-2 transform hover:translate-y-2 transition duration-150 hover:shadow-2xl'
